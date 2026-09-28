@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto Pârâu Studio - Ședințe Foto de Crăciun</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --emerald-dark: #072e20;
+            --emerald: #0b4f38;
+            --emerald-light: #126b4c;
+            --burgundy-dark: #5c0617;
+            --burgundy: #8b0020;
+            --burgundy-light: #ad1134;
+            --gold: #d4af37;
+            --gold-light: #f3e5ab;
+            --cream: #fbf9f4;
+            --charcoal: #222222;
+            --white: #ffffff;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Top Bar & Header */
+        header {
+            background: linear-gradient(135deg, var(--emerald-dark), var(--emerald));
+            color: var(--white);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            font-size: 2.2rem;
+            color: var(--gold);
+        }
+
+        .logo-text h1 {
+            font-size: 1.8rem;
+            color: var(--white);
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text p {
+            font-size: 0.85rem;
+            color: var(--gold-light);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold), #b89728);
+            color: var(--emerald-dark);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+            background: linear-gradient(135deg, #e6c552, var(--gold));
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--gold);
+            padding: 0.65rem 1.4rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: var(--emerald-dark);
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(7, 46, 32, 0.85), rgba(92, 6, 23, 0.85)), url('https://images.unsplash.com/photo-1543589077-47d81606c1bf?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            border-radius: 20px;
+            padding: 5rem 2rem;
+            text-align: center;
+            color: var(--white);
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border: 2px solid var(--gold);
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--gold-light);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+            opacity: 0.95;
+        }
+
+        /* Form & Content Sections */
+        .section-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--emerald-dark);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            border-bottom: 2px solid var(--gold-light);
+            padding-bottom: 0.75rem;
+        }
+
+        .section-title i {
+            color: var(--burgundy);
+        }
+
+        /* Booking Form Styling */
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--emerald-dark);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--cream);
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--emerald);
+            background: var(--white);
+            box-shadow: 0 0 0 4px rgba(11, 79, 56, 0.1);
+        }
+
+        .help-text {
+            font-size: 0.8rem;
+            color: var(--burgundy);
+            margin-top: 0.3rem;
+            font-weight: 500;
+        }
+
+        /* Regulations Box in Form */
+        .regulations-box {
+            background: #fff8f8;
+            border: 2px dashed var(--burgundy);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .regulations-box h4 {
+            color: var(--burgundy);
+            margin-bottom: 0.5rem;
+        }
+
+        .regulations-content {
+            max-height: 150px;
+            overflow-y: auto;
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 1rem;
+            padding-right: 0.5rem;
+            white-space: pre-line;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--emerald-dark);
+        }
+
+        .checkbox-label input {
+            width: 20px;
+            height: 20px;
+            accent-color: var(--emerald);
+            cursor: pointer;
+        }
+
+        /* Public Packages & Services Display */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .package-card {
+            background: linear-gradient(145deg, #ffffff, #f9f6ee);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid var(--gold);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .package-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--emerald), var(--burgundy));
+        }
+
+        .package-title {
+            font-size: 1.5rem;
+            color: var(--emerald-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .package-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--burgundy);
+            margin-bottom: 1rem;
+        }
+
+        .package-desc {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Modal Overlay */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-card {
+            background: var(--white);
+            width: 90%;
+            max-width: 500px;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            position: relative;
+            border: 2px solid var(--gold);
+            transform: translateY(20px);
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active .modal-card {
+            transform: translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--charcoal);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            color: var(--burgundy);
+        }
+
+        .modal-card h3 {
+            color: var(--emerald-dark);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        /* Admin Panel Styles */
+        .admin-dashboard {
+            display: none;
+        }
+
+        .admin-dashboard.active {
+            display: block;
+        }
+
+        .admin-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 1rem;
+        }
+
+        .admin-tab-btn {
+            background: var(--cream);
+            border: 1px solid #d0d0d0;
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--emerald-dark);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .admin-tab-btn.active, .admin-tab-btn:hover {
+            background: var(--emerald);
+            color: var(--white);
+            border-color: var(--emerald);
+        }
+
+        .admin-section-pane {
+            display: none;
+        }
+
+        .admin-section-pane.active {
+            display: block;
+        }
+
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: var(--emerald-dark);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: rgba(212, 175, 55, 0.05);
+        }
+
+        .badge {
+            padding: 0.35rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .badge-pending { background: #fff3cd; color: #856404; }
+        .badge-present { background: #d4edda; color: #155724; }
+        .badge-cancelled { background: #f8d7da; color: #721c24; }
+
+        .action-btns {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-icon {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.4rem;
+            border-radius: 6px;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+
+        .btn-edit { color: var(--emerald); background: rgba(11, 79, 56, 0.1); }
+        .btn-edit:hover { background: var(--emerald); color: var(--white); }
+
+        .btn-delete { color: var(--burgundy); background: rgba(139, 0, 32, 0.1); }
+        .btn-delete:hover { background: var(--burgundy); color: var(--white); }
+
+        .btn-status { color: #d4af37; background: rgba(212, 175, 55, 0.1); }
+        .btn-status:hover { background: #d4af37; color: var(--white); }
+
+        /* Footer */
+        footer {
+            background: var(--emerald-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2.5rem;
+            margin-top: 4rem;
+            border-top: 3px solid var(--gold);
+        }
+
+        footer p {
+            color: var(--gold-light);
+            font-size: 0.95rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 2.2rem; }
+            .header-container { flex-direction: column; align-items: stretch; text-align: center; }
+            .logo-area { justify-content: center; }
+            .header-actions { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <div class="logo-icon"><i class="fa-solid fa-holly-berry"></i></div>
+                <div class="logo-text">
+                    <h1>Foto Pârâu Studio</h1>
+                    <p>Magia Sărbătorilor de Crăciun</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="btn-outline" onclick="openClientView()"><i class="fa-solid fa-calendar-check"></i> Programare</button>
+                <button class="btn-gold" onclick="openAdminLoginModal()"><i class="fa-solid fa-lock"></i> Panou Admin</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+
+        <!-- PUBLIC WEBSITE VIEW (Client Booking & Packages) -->
+        <div id="clientView">
+            
+            <!-- Hero Section -->
+            <section class="hero">
+                <h2>Creează Amintiri de Neprețuit</h2>
+                <p>Rezervă acum ședința foto de Crăciun la Foto Pârâu Studio și surprinde magia sărbătorilor alături de cei dragi într-un decor de poveste!</p>
+                <button class="btn-gold" onclick="document.getElementById('bookingSection').scrollIntoView({behavior: 'smooth'})">
+                    <i class="fa-solid fa-gift"></i> Rezervă Acum Ședința
+                </button>
+            </section>
+
+            <!-- Packages Presentation -->
+            <section class="section-card">
+                <h3 class="section-title"><i class="fa-solid fa-star"></i> Pachetele Noastre Festive</h3>
+                <div id="publicPackagesGrid" class="packages-grid">
+                    <!-- Dinamic din JS -->
+                </div>
+            </section>
+
+            <!-- Booking Form Section -->
+            <section id="bookingSection" class="section-card">
+                <h3 class="section-title"><i class="fa-solid fa-pen-nib"></i> Formular Programare Ședință Foto</h3>
+                
+                <form id="bookingForm" onsubmit="submitBooking(event)">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="clientName">Numele Complet *</label>
+                            <input type="text" id="clientName" required placeholder="Ex: Popescu Maria">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="clientPhone">Telefon *</label>
+                            <input type="tel" id="clientPhone" required placeholder="Ex: 0712345678">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="clientSessionType">Tipul de Ședință Foto *</label>
+                            <select id="clientSessionType" required onchange="updatePackagesAndExtras()">
+                                <option value="">-- Selectează tipul --</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="clientPackage">Pachetul Ales *</label>
+                            <select id="clientPackage" required>
+                                <option value="">-- Mai întâi alege tipul de ședință --</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="clientExtraService">Serviciu Extra (Opțional)</label>
+                            <select id="clientExtraService">
+                                <option value="Niciunul">Fără serviciu extra</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="clientDate">Data Dorită *</label>
+                            <input type="date" id="clientDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="clientTime">Ora Dorită *</label>
+                            <input type="time" id="clientTime" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="clientPersons">Câte persoane vor fi prezente? *</label>
+                            <input type="number" id="clientPersons" min="1" max="20" required placeholder="Nr. persoane">
+                            <div class="help-text" id="personsHelp">La pachetul de familii se recomandă maxim 4 persoane.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="clientOutfits">Câte ținute va avea fiecare persoană? *</label>
+                            <input type="number" id="clientOutfits" min="1" max="5" required placeholder="Nr. ținute">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="clientDetails">Detalii Suplimentare</label>
+                            <textarea id="clientDetails" rows="3" placeholder="Mențiuni speciale, vârsta copiilor, preferințe de decor..."></textarea>
+                        </div>
+
+                        <!-- Regulations Box -->
+                        <div class="form-group full-width">
+                            <div class="regulations-box">
+                                <h4>Regulamentul Studio Foto Pârâu</h4>
+                                <div id="displayRegulationsText" class="regulations-content">
+                                    Se încarcă regulamentul...
+                                </div>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="readRegulationsCheck" required>
+                                    Am citit și sunt de acord cu regulamentul studioului foto
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 1.5rem;">
+                        <button type="submit" class="btn-gold" style="font-size: 1.1rem; padding: 1rem 2.5rem;">
+                            <i class="fa-brands fa-whatsapp"></i> Trimite Solicitarea pe WhatsApp
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <!-- ADMIN PANEL VIEW -->
+        <div id="adminDashboard" class="admin-dashboard">
+            <div class="section-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+                    <h2 class="section-title" style="margin-bottom:0;"><i class="fa-solid fa-gauge-high"></i> Panou Administrator - Foto Pârâu Studio</h2>
+                    <button class="btn-outline" style="border-color: var(--burgundy); color: var(--burgundy);" onclick="logoutAdmin()">
+                        <i class="fa-solid fa-right-from-bracket"></i> Deconectare
+                    </button>
+                </div>
+
+                <!-- Admin Tabs -->
+                <div class="admin-tabs">
+                    <button class="admin-tab-btn active" onclick="switchAdminTab('appointmentsTab', this)"><i class="fa-solid fa-calendar-days"></i> Programări</button>
+                    <button class="admin-tab-btn" onclick="switchAdminTab('sessionsTab', this)"><i class="fa-solid fa-camera"></i> Tipuri Ședințe</button>
+                    <button class="admin-tab-btn" onclick="switchAdminTab('packagesTab', this)"><i class="fa-solid fa-box-archive"></i> Pachete Foto</button>
+                    <button class="admin-tab-btn" onclick="switchAdminTab('extrasTab', this)"><i class="fa-solid fa-plus-minus"></i> Servicii Extra</button>
+                    <button class="admin-tab-btn" onclick="switchAdminTab('regulationsTab', this)"><i class="fa-solid fa-file-contract"></i> Regulament</button>
+                </div>
+
+                <!-- TAB 1: APPOINTMENTS -->
+                <div id="appointmentsTab" class="admin-section-pane active">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                        <h3 style="color: var(--emerald-dark);">Gestionare Programări</h3>
+                        <button class="btn-gold" onclick="openAppointmentModal()"><i class="fa-solid fa-plus"></i> Adaugă Programare Manual</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nume & Telefon</th>
+                                    <th>Ședință / Pachet</th>
+                                    <th>Data & Ora</th>
+                                    <th>Detalii & Persoane</th>
+                                    <th>Status</th>
+                                    <th>Acțiuni</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminAppointmentsTableBody">
+                                <!-- Dinamic din JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- TAB 2: SESSION TYPES -->
+                <div id="sessionsTab" class="admin-section-pane">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                        <h3 style="color: var(--emerald-dark);">Tipuri de Ședințe Foto</h3>
+                        <button class="btn-gold" onclick="openSessionModal()"><i class="fa-solid fa-plus"></i> Adaugă Tip Ședință</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Denumire</th>
+                                    <th>Descriere</th>
+                                    <th>Acțiuni</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminSessionsTableBody">
+                                <!-- Dinamic din JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- TAB 3: PACKAGES -->
+                <div id="packagesTab" class="admin-section-pane">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                        <h3 style="color: var(--emerald-dark);">Pachete Foto</h3>
+                        <button class="btn-gold" onclick="openPackageModal()"><i class="fa-solid fa-plus"></i> Adaugă Pachet</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tip Ședință</th>
+                                    <th>Nume Pachet</th>
+                                    <th>Preț</th>
+                                    <th>Descriere</th>
+                                    <th>Acțiuni</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminPackagesTableBody">
+                                <!-- Dinamic din JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- TAB 4: EXTRA SERVICES -->
+                <div id="extrasTab" class="admin-section-pane">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                        <h3 style="color: var(--emerald-dark);">Servicii Extra per Tip Ședință</h3>
+                        <button class="btn-gold" onclick="openExtraModal()"><i class="fa-solid fa-plus"></i> Adaugă Serviciu Extra</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tip Ședință</th>
+                                    <th>Nume Serviciu Extra</th>
+                                    <th>Preț</th>
+                                    <th>Acțiuni</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminExtrasTableBody">
+                                <!-- Dinamic din JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- TAB 5: REGULATIONS -->
+                <div id="regulationsTab" class="admin-section-pane">
+                    <h3 style="color: var(--emerald-dark); margin-bottom: 1rem;">Editare Regulament Studio</h3>
+                    <div class="form-group">
+                        <textarea id="adminRegulationsEditor" rows="10" placeholder="Introduceți regulamentul studioului..."></textarea>
+                    </div>
+                    <button class="btn-gold" onclick="saveRegulations()"><i class="fa-solid fa-floppy-disk"></i> Salvează Regulamentul</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="main-container" style="margin: 0 auto;">
+            <p>&copy; 2026 Foto Pârâu Studio. Toate drepturile rezervate. Magia Crăciunului în fiecare cadru.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL: ADMIN LOGIN -->
+    <div id="adminLoginModal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal('adminLoginModal')">&times;</button>
+            <h3>Autentificare Administrator</h3>
+            <form onsubmit="handleAdminLogin(event)">
+                <div class="form-group">
+                    <label for="adminPasswordInput">Parolă Administrator</label>
+                    <input type="password" id="adminPasswordInput" required placeholder="Introduceți parola...">
+                </div>
+                <button type="submit" class="btn-gold" style="width: 100%; justify-content: center; margin-top: 1rem;">Autentificare</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL: APPOINTMENT EDIT/ADD -->
+    <div id="appointmentModal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal('appointmentModal')">&times;</button>
+            <h3 id="appointmentModalTitle">Adaugă Programare</h3>
+            <form onsubmit="saveAppointmentData(event)">
+                <input type="hidden" id="editAppointmentId">
+                <div class="form-group">
+                    <label>Nume Client *</label>
+                    <input type="text" id="modalAppName" required>
+                </div>
+                <div class="form-group">
+                    <label>Telefon *</label>
+                    <input type="tel" id="modalAppPhone" required>
+                </div>
+                <div class="form-group">
+                    <label>Tip Ședință *</label>
+                    <input type="text" id="modalAppType" required>
+                </div>
+                <div class="form-group">
+                    <label>Pachet *</label>
+                    <input type="text" id="modalAppPackage" required>
+                </div>
+                <div class="form-group">
+                    <label>Data *</label>
+                    <input type="date" id="modalAppDate" required>
+                </div>
+                <div class="form-group">
+                    <label>Ora *</label>
+                    <input type="time" id="modalAppTime" required>
+                </div>
+                <div class="form-group">
+                    <label>Status</label>
+                    <select id="modalAppStatus">
+                        <option value="În așteptare">În așteptare</option>
+                        <option value="Prezent">Prezent</option>
+                        <option value="Anulat">Anulat</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-gold" style="width: 100%; justify-content: center; margin-top: 1rem;">Salvează Programarea</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL: SESSION TYPE EDIT/ADD -->
+    <div id="sessionModal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal('sessionModal')">&times;</button>
+            <h3 id="sessionModalTitle">Adaugă Tip Ședință</h3>
+            <form onsubmit="saveSessionData(event)">
+                <input type="hidden" id="editSessionOriginalName">
+                <div class="form-group">
+                    <label>Denumire (ex: Familie, Cuplu) *</label>
+                    <input type="text" id="modalSessionName" required>
+                </div>
+                <div class="form-group">
+                    <label>Descriere *</label>
+                    <textarea id="modalSessionDesc" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn-gold" style="width: 100%; justify-content: center; margin-top: 1rem;">Salvează Tip</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL: PACKAGE EDIT/ADD -->
+    <div id="packageModal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal('packageModal')">&times;</button>
+            <h3 id="packageModalTitle">Adaugă Pachet Foto</h3>
+            <form onsubmit="savePackageData(event)">
+                <input type="hidden" id="editPackageIndex">
+                <div class="form-group">
+                    <label>Tip Ședință Asoc. *</label>
+                    <select id="modalPkgSessionType" required></select>
+                </div>
+                <div class="form-group">
+                    <label>Nume Pachet *</label>
+                    <input type="text" id="modalPkgName" required>
+                </div>
+                <div class="form-group">
+                    <label>Preț (ex: 300 RON) *</label>
+                    <input type="text" id="modalPkgPrice" required>
+                </div>
+                <div class="form-group">
+                    <label>Descriere Pachet *</label>
+                    <textarea id="modalPkgDesc" rows="2" required></textarea>
+                </div>
+                <button type="submit" class="btn-gold" style="width: 100%; justify-content: center; margin-top: 1rem;">Salvează Pachet</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL: EXTRA SERVICE EDIT/ADD -->
+    <div id="extraModal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal('extraModal')">&times;</button>
+            <h3 id="extraModalTitle">Adaugă Serviciu Extra</h3>
+            <form onsubmit="saveExtraData(event)">
+                <input type="hidden" id="editExtraIndex">
+                <div class="form-group">
+                    <label>Tip Ședință Asoc. *</label>
+                    <select id="modalExtraSessionType" required></select>
+                </div>
+                <div class="form-group">
+                    <label>Nume Serviciu Extra *</label>
+                    <input type="text" id="modalExtraName" required>
+                </div>
+                <div class="form-group">
+                    <label>Preț *</label>
+                    <input type="text" id="modalExtraPrice" required>
+                </div>
+                <button type="submit" class="btn-gold" style="width: 100%; justify-content: center; margin-top: 1rem;">Salvează Extra</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Criptare / Obfuscation parolă admin 1974
+        const _adminHash = "MTk3NA=="; // Base64 pentru 1974
+
+        // Default Data Store
+        const defaultData = {
+            regulations: "1. Rezervarea se face cu cel puțin 24 de ore înainte.\n2. Vă rugăm să fiți punctuali la ședința foto.\n3. Anularea sau reprogramarea se anunță telefonic cu minim 12 ore înainte.\n4. La ședințele foto de familie se recomandă un număr maxim de 4 persoane pentru a asigura confortul în decor.\n5. Plata se achită la sfârșitul ședinței foto.",
+            sessionTypes: [
+                { name: "Familie", desc: "Ședință foto magică dedicată întregii familii în decor de Crăciun." },
+                { name: "Cuplu", desc: "Cadre romantice și festive pentru cupluri în atmosfera sărbătorilor." },
+                { name: "Copii", desc: "Portrete minunate și cadre jucăușe pentru cei mici." }
+            ],
+            packages: [
+                { sessionType: "Familie", name: "Pachetul Crăciun Clasic", price: "350 RON", desc: "45 minute, 15 fotografii editate digital, decor de poveste." },
+                { sessionType: "Familie", name: "Pachetul Magic", price: "500 RON", desc: "60 minute, 30 fotografii editate, album inclus." },
+                { sessionType: "Cuplu", name: "Pachetul Romantic", price: "300 RON", desc: "40 minute, 12 fotografii editate, decor cu luminițe și cadouri." },
+                { sessionType: "Copii", name: "Pachetul Spiridușilor", price: "250 RON", desc: "30 minute, 10 fotografii editate, accesorii incluse." }
+            ],
+            extras: [
+                { sessionType: "Familie", name: "Fotografie suplimentară editată", price: "25 RON/buc" },
+                { sessionType: "Cuplu", name: "Sticlă de vin spumant decorativă", price: "50 RON" }
+            ],
+            appointments: []
+        };
+
+        // Load or Initialize localStorage
+        function getStoredData() {
+            if (!localStorage.getItem('foto_parau_data')) {
+                localStorage.setItem('foto_parau_data', JSON.stringify(defaultData));
+            }
+            return JSON.parse(localStorage.getItem('foto_parau_data'));
+        }
+
+        function saveStoredData(data) {
+            localStorage.setItem('foto_parau_data', JSON.stringify(data));
+        }
+
+        // Init on DOM Load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderClientInterface();
+        });
+
+        // --- CLIENT VIEW & INTERACTIONS ---
+        function renderClientInterface() {
+            const data = getStoredData();
+            
+            // Render regulations in form
+            document.getElementById('displayRegulationsText').innerText = data.regulations;
+            
+            // Populate Session Types dropdown
+            const sessionSelect = document.getElementById('clientSessionType');
+            sessionSelect.innerHTML = '<option value="">-- Selectează tipul --</option>';
+            data.sessionTypes.forEach(s => {
+                sessionSelect.innerHTML += `<option value="${s.name}">${s.name}</option>`;
+            });
+
+            // Render Public Packages
+            const pkgGrid = document.getElementById('publicPackagesGrid');
+            pkgGrid.innerHTML = '';
+            if(data.packages.length === 0) {
+                pkgGrid.innerHTML = '<p>Momentan nu sunt pachete afișate.</p>';
+            } else {
+                data.packages.forEach(p => {
+                    pkgGrid.innerHTML += `
+                        <div class="package-card">
+                            <div>
+                                <span class="badge badge-pending" style="margin-bottom: 0.5rem;">${p.sessionType}</span>
+                                <h4 class="package-title">${p.name}</h4>
+                                <div class="package-price">${p.price}</div>
+                                <p class="package-desc">${p.desc}</p>
+                            </div>
+                            <button class="btn-gold" style="width: 100%; justify-content: center;" onclick="selectPackageAndScroll('${p.sessionType}', '${p.name}')">
+                                <i class="fa-solid fa-calendar-plus"></i> Alege Acest Pachet
+                            </button>
+                        </div>
+                    `;
+                });
+            }
+        }
+
+        function updatePackagesAndExtras() {
+            const data = getStoredData();
+            const selectedType = document.getElementById('clientSessionType').value;
+            
+            // Update packages dropdown
+            const pkgSelect = document.getElementById('clientPackage');
+            pkgSelect.innerHTML = '<option value="">-- Selectează pachetul --</option>';
+            
+            // Update extras dropdown
+            const extraSelect = document.getElementById('clientExtraService');
+            extraSelect.innerHTML = '<option value="Niciunul">Fără serviciu extra</option>';
+
+            if (!selectedType) return;
+
+            data.packages.filter(p => p.sessionType === selectedType).forEach(p => {
+                pkgSelect.innerHTML += `<option value="${p.name} (${p.price})">${p.name} - ${p.price}</option>`;
+            });
+
+            data.extras.filter(e => e.sessionType === selectedType).forEach(e => {
+                extraSelect.innerHTML += `<option value="${e.name} (${e.price})">${e.name} - ${e.price}</option>`;
+            });
+
+            // Dynamic help text update for family
+            const helpText = document.getElementById('personsHelp');
+            if (selectedType.toLowerCase().includes('familie')) {
+                helpText.style.display = 'block';
+            } else {
+                helpText.style.display = 'none';
+            }
+        }
+
+        function selectPackageAndScroll(sessionType, packageName) {
+            document.getElementById('clientSessionType').value = sessionType;
+            updatePackagesAndExtras();
+            const pkgSelect = document.getElementById('clientPackage');
+            for(let i=0; i<pkgSelect.options.length; i++) {
+                if(pkgSelect.options[i].text.includes(packageName)) {
+                    pkgSelect.selectedIndex = i;
+                    break;
+                }
+            }
+            document.getElementById('bookingSection').scrollIntoView({behavior: 'smooth'});
+        }
+
+        // Submit Booking and Send to WhatsApp
+        function submitBooking(e) {
+            e.preventDefault();
+
+            const isChecked = document.getElementById('readRegulationsCheck').checked;
+            if (!isChecked) {
+                alert("Te rugăm să citești regulamentul și să bifezi că ești de acord înainte de a trimite solicitarea!");
+                return;
+            }
+
+            const name = document.getElementById('clientName').value.trim();
+            const phone = document.getElementById('clientPhone').value.trim();
+            const sessionType = document.getElementById('clientSessionType').value;
+            const packageVal = document.getElementById('clientPackage').value;
+            const extraVal = document.getElementById('clientExtraService').value;
+            const date = document.getElementById('clientDate').value;
+            const time = document.getElementById('clientTime').value;
+            const persons = document.getElementById('clientPersons').value;
+            const outfits = document.getElementById('clientOutfits').value;
+            const details = document.getElementById('clientDetails').value.trim() || "Fără detalii suplimentare";
+
+            // Save booking in admin data
+            const data = getStoredData();
+            const newApp = {
+                id: Date.now(),
+                name,
+                phone,
+                sessionType,
+                packageVal,
+                extraVal,
+                date,
+                time,
+                persons,
+                outfits,
+                details,
+                status: "În așteptare"
+            };
+            data.appointments.push(newApp);
+            saveStoredData(data);
+
+            // Construct WhatsApp Message (Line by line exactly as requested)
+            const waMessage = 
+`Salut! Doresc o programare pentru o ședință foto de Crăciun la Foto Pârâu Studio:
+- Nume: ${name}
+- Telefon: ${phone}
+- Tip ședință foto: ${sessionType}
+- Pachet ales: ${packageVal}
+- Serviciu extra: ${extraVal}
+- Data dorită: ${date}
+- Ora dorită: ${time}
+- Persoane prezente: ${persons}
+- Ținute per persoană: ${outfits}
+- Detalii suplimentare: ${details}
+
+Sunteți disponibil în ziua și ora respectivă?`;
+
+            // WhatsApp link encoding
+            const targetPhone = "40753814951";
+            const encodedMessage = encodeURIComponent(waMessage);
+            const whatsappUrl = `https://wa.me/${targetPhone}?text=${encodedMessage}`;
+
+            // Open WhatsApp
+            window.open(whatsappUrl, '_blank');
+
+            // Reset Form & Notify
+            document.getElementById('bookingForm').reset();
+            alert("Solicitarea ta a fost înregistrată și se deschide WhatsApp-ul pentru trimiterea mesajului către studio!");
+        }
+
+        // --- ADMIN LOGIN & PANEL LOGIC ---
+        function openAdminLoginModal() {
+            document.getElementById('adminLoginModal').classList.add('active');
+        }
+
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            const pass = document.getElementById('adminPasswordInput').value;
+            // Verificare criptare sigură în cod (Base64 hash)
+            if (btoa(pass) === _adminHash) {
+                closeModal('adminLoginModal');
+                document.getElementById('adminPasswordInput').value = '';
+                document.getElementById('clientView').style.display = 'none';
+                document.getElementById('adminDashboard').classList.add('active');
+                renderAdminPanel();
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            } else {
+                alert("Parolă incorectă!");
+            }
+        }
+
+        function logoutAdmin() {
+            document.getElementById('adminDashboard').classList.remove('active');
+            document.getElementById('clientView').style.display = 'block';
+            renderClientInterface();
+        }
+
+        function switchAdminTab(tabId, btn) {
+            document.querySelectorAll('.admin-section-pane').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.admin-tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            btn.classList.add('active');
+            renderAdminPanel();
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+
+        function renderAdminPanel() {
+            const data = getStoredData();
+
+            // 1. Appointments Table
+            const appBody = document.getElementById('adminAppointmentsTableBody');
+            appBody.innerHTML = '';
+            if(data.appointments.length === 0) {
+                appBody.innerHTML = '<tr><td colspan="6" style="text-align:center;">Nu există programări înregistrate.</td></tr>';
+            } else {
+                data.appointments.forEach(app => {
+                    let badgeClass = 'badge-pending';
+                    if(app.status === 'Prezent') badgeClass = 'badge-present';
+                    if(app.status === 'Anulat') badgeClass = 'badge-cancelled';
+
+                    appBody.innerHTML += `
+                        <tr>
+                            <td><strong>${app.name}</strong><br><small><a href="tel:${app.phone}">${app.phone}</a></small></td>
+                            <td>${app.sessionType}<br><small>${app.packageVal}</small>${app.extraVal !== 'Niciunul' ? '<br><small style="color:var(--burgundy)">Extra: ' + app.extraVal + '</small>' : ''}</td>
+                            <td>${app.date}<br><strong>${app.time}</strong></td>
+                            <td>Persoane: ${app.persons}<br>Ținute: ${app.outfits}<br><small>${app.details}</small></td>
+                            <td><span class="badge ${badgeClass}">${app.status}</span></td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="btn-icon btn-status" title="Schimbă Status Prezent/Anulat" onclick="toggleAppStatus(${app.id})"><i class="fa-solid fa-check-double"></i></button>
+                                    <button class="btn-icon btn-edit" title="Editează" onclick="editAppointment(${app.id})"><i class="fa-solid fa-pen"></i></button>
+                                    <button class="btn-icon btn-delete" title="Șterge" onclick="deleteAppointment(${app.id})"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    `;
+                });
+            }
+
+            // 2. Session Types Table
+            const sessBody = document.getElementById('adminSessionsTableBody');
+            sessBody.innerHTML = '';
+            data.sessionTypes.forEach(s => {
+                sessBody.innerHTML += `
+                    <tr>
+                        <td><strong>${s.name}</strong></td>
+                        <td>${s.desc}</td>
+                        <td>
+                            <div class="action-btns">
+                                <button class="btn-icon btn-edit" onclick="editSession('${s.name}')"><i class="fa-solid fa-pen"></i></button>
+                                <button class="btn-icon btn-delete" onclick="deleteSession('${s.name}')"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            // 3. Packages Table
+            const pkgBody = document.getElementById('adminPackagesTableBody');
+            pkgBody.innerHTML = '';
+            data.packages.forEach((p, idx) => {
+                pkgBody.innerHTML += `
+                    <tr>
+                        <td><span class="badge badge-pending">${p.sessionType}</span></td>
+                        <td><strong>${p.name}</strong></td>
+                        <td style="color: var(--burgundy); font-weight: 700;">${p.price}</td>
+                        <td>${p.desc}</td>
+                        <td>
+                            <div class="action-btns">
+                                <button class="btn-icon btn-edit" onclick="editPackage(${idx})"><i class="fa-solid fa-pen"></i></button>
+                                <button class="btn-icon btn-delete" onclick="deletePackage(${idx})"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            // 4. Extras Table
+            const extraBody = document.getElementById('adminExtrasTableBody');
+            extraBody.innerHTML = '';
+            data.extras.forEach((e, idx) => {
+                extraBody.innerHTML += `
+                    <tr>
+                        <td><span class="badge badge-pending">${e.sessionType}</span></td>
+                        <td><strong>${e.name}</strong></td>
+                        <td style="color: var(--burgundy); font-weight: 700;">${e.price}</td>
+                        <td>
+                            <div class="action-btns">
+                                <button class="btn-icon btn-delete" onclick="deleteExtra(${idx})"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            // 5. Regulations Editor
+            document.getElementById('adminRegulationsEditor').value = data.regulations;
+        }
+
+        // --- CRUD OPERATIONS FOR ADMIN ---
+
+        // Session Types
+        function openSessionModal() {
+            document.getElementById('sessionModalTitle').innerText = "Adaugă Tip Ședință";
+            document.getElementById('editSessionOriginalName').value = "";
+            document.getElementById('modalSessionName').value = "";
+            document.getElementById('modalSessionDesc').value = "";
+            document.getElementById('sessionModal').classList.add('active');
+        }
+
+        function editSession(name) {
+            const data = getStoredData();
+            const s = data.sessionTypes.find(x => x.name === name);
+            if(!s) return;
+            document.getElementById('sessionModalTitle').innerText = "Editează Tip Ședință";
+            document.getElementById('editSessionOriginalName').value = s.name;
+            document.getElementById('modalSessionName').value = s.name;
+            document.getElementById('modalSessionDesc').value = s.desc;
+            document.getElementById('sessionModal').classList.add('active');
+        }
+
+        function saveSessionData(e) {
+            e.preventDefault();
+            const orig = document.getElementById('editSessionOriginalName').value;
+            const name = document.getElementById('modalSessionName').value.trim();
+            const desc = document.getElementById('modalSessionDesc').value.trim();
+            const data = getStoredData();
+
+            if(orig) {
+                // Edit
+                const idx = data.sessionTypes.findIndex(x => x.name === orig);
+                if(idx !== -1) {
+                    data.sessionTypes[idx].name = name;
+                    data.sessionTypes[idx].desc = desc;
+                }
+            } else {
+                // Add
+                if(data.sessionTypes.some(x => x.name === name)) {
+                    alert("Acest tip de ședință există deja!");
+                    return;
+                }
+                data.sessionTypes.push({ name, desc });
+            }
+            saveStoredData(data);
+            closeModal('sessionModal');
+            renderAdminPanel();
+        }
+
+        function deleteSession(name) {
+            if(confirm(`Sigur doriți să ștergeți tipul "${name}"?`)) {
+                const data = getStoredData();
+                data.sessionTypes = data.sessionTypes.filter(x => x.name !== name);
+                saveStoredData(data);
+                renderAdminPanel();
+            }
+        }
+
+        // Packages
+        function populateSessionDropdowns(selectId) {
+            const data = getStoredData();
+            const sel = document.getElementById(selectId);
+            sel.innerHTML = '';
+            data.sessionTypes.forEach(s => {
+                sel.innerHTML += `<option value="${s.name}">${s.name}</option>`;
+            });
+        }
+
+        function openPackageModal() {
+            populateSessionDropdowns('modalPkgSessionType');
+            document.getElementById('packageModalTitle').innerText = "Adaugă Pachet Foto";
+            document.getElementById('editPackageIndex').value = "";
+            document.getElementById('modalPkgName').value = "";
+            document.getElementById('modalPkgPrice').value = "";
+            document.getElementById('modalPkgDesc').value = "";
+            document.getElementById('packageModal').classList.add('active');
+        }
+
+        function editPackage(idx) {
+            populateSessionDropdowns('modalPkgSessionType');
+            const data = getStoredData();
+            const p = data.packages[idx];
+            document.getElementById('packageModalTitle').innerText = "Editează Pachet Foto";
+            document.getElementById('editPackageIndex').value = idx;
+            document.getElementById('modalPkgSessionType').value = p.sessionType;
+            document.getElementById('modalPkgName').value = p.name;
+            document.getElementById('modalPkgPrice').value = p.price;
+            document.getElementById('modalPkgDesc').value = p.desc;
+            document.getElementById('packageModal').classList.add('active');
+        }
+
+        function savePackageData(e) {
+            e.preventDefault();
+            const idx = document.getElementById('editPackageIndex').value;
+            const sessionType = document.getElementById('modalPkgSessionType').value;
+            const name = document.getElementById('modalPkgName').value.trim();
+            const price = document.getElementById('modalPkgPrice').value.trim();
+            const desc = document.getElementById('modalPkgDesc').value.trim();
+            const data = getStoredData();
+
+            if(idx !== "") {
+                data.packages[idx] = { sessionType, name, price, desc };
+            } else {
+                data.packages.push({ sessionType, name, price, desc });
+            }
+            saveStoredData(data);
+            closeModal('packageModal');
+            renderAdminPanel();
+        }
+
+        function deletePackage(idx) {
+            if(confirm("Sigur doriți să ștergeți acest pachet?")) {
+                const data = getStoredData();
+                data.packages.splice(idx, 1);
+                saveStoredData(data);
+                renderAdminPanel();
+            }
+        }
+
+        // Extra Services
+        function openExtraModal() {
+            populateSessionDropdowns('modalExtraSessionType');
+            document.getElementById('extraModalTitle').innerText = "Adaugă Serviciu Extra";
+            document.getElementById('modalExtraName').value = "";
+            document.getElementById('modalExtraPrice').value = "";
+            document.getElementById('extraModal').classList.add('active');
+        }
+
+        function saveExtraData(e) {
+            e.preventDefault();
+            const sessionType = document.getElementById('modalExtraSessionType').value;
+            const name = document.getElementById('modalExtraName').value.trim();
+            const price = document.getElementById('modalExtraPrice').value.trim();
+            const data = getStoredData();
+
+            data.extras.push({ sessionType, name, price });
+            saveStoredData(data);
+            closeModal('extraModal');
+            renderAdminPanel();
+        }
+
+        function deleteExtra(idx) {
+            if(confirm("Sigur doriți să ștergeți acest serviciu extra?")) {
+                const data = getStoredData();
+                data.extras.splice(idx, 1);
+                saveStoredData(data);
+                renderAdminPanel();
+            }
+        }
+
+        // Appointments Management
+        function openAppointmentModal() {
+            document.getElementById('appointmentModalTitle').innerText = "Adaugă Programare Manual";
+            document.getElementById('editAppointmentId').value = "";
+            document.getElementById('modalAppName').value = "";
+            document.getElementById('modalAppPhone').value = "";
+            document.getElementById('modalAppType').value = "";
+            document.getElementById('modalAppPackage').value = "";
+            document.getElementById('modalAppDate').value = "";
+            document.getElementById('modalAppTime').value = "";
+            document.getElementById('modalAppStatus').value = "În așteptare";
+            document.getElementById('appointmentModal').classList.add('active');
+        }
+
+        function editAppointment(id) {
+            const data = getStoredData();
+            const app = data.appointments.find(x => x.id === id);
+            if(!app) return;
+            document.getElementById('appointmentModalTitle').innerText = "Editează Programare";
+            document.getElementById('editAppointmentId').value = app.id;
+            document.getElementById('modalAppName').value = app.name;
+            document.getElementById('modalAppPhone').value = app.phone;
+            document.getElementById('modalAppType').value = app.sessionType;
+            document.getElementById('modalAppPackage').value = app.packageVal;
+            document.getElementById('modalAppDate').value = app.date;
+            document.getElementById('modalAppTime').value = app.time;
+            document.getElementById('modalAppStatus').value = app.status;
+            document.getElementById('appointmentModal').classList.add('active');
+        }
+
+        function saveAppointmentData(e) {
+            e.preventDefault();
+            const idVal = document.getElementById('editAppointmentId').value;
+            const name = document.getElementById('modalAppName').value.trim();
+            const phone = document.getElementById('modalAppPhone').value.trim();
+            const sessionType = document.getElementById('modalAppType').value.trim();
+            const packageVal = document.getElementById('modalAppPackage').value.trim();
+            const date = document.getElementById('modalAppDate').value;
+            const time = document.getElementById('modalAppTime').value;
+            const status = document.getElementById('modalAppStatus').value;
+            const data = getStoredData();
+
+            if(idVal) {
+                const app = data.appointments.find(x => x.id == idVal);
+                if(app) {
+                    app.name = name;
+                    app.phone = phone;
+                    app.sessionType = sessionType;
+                    app.packageVal = packageVal;
+                    app.date = date;
+                    app.time = time;
+                    app.status = status;
+                }
+            } else {
+                data.appointments.push({
+                    id: Date.now(),
+                    name,
+                    phone,
+                    sessionType,
+                    packageVal,
+                    extraVal: "Niciunul",
+                    date,
+                    time,
+                    persons: "2",
+                    outfits: "1",
+                    details: "Adăugat manual de administrator",
+                    status
+                });
+            }
+            saveStoredData(data);
+            closeModal('appointmentModal');
+            renderAdminPanel();
+        }
+
+        function toggleAppStatus(id) {
+            const data = getStoredData();
+            const app = data.appointments.find(x => x.id === id);
+            if(app) {
+                if(app.status === 'În așteptare') app.status = 'Prezent';
+                else if(app.status === 'Prezent') app.status = 'Anulat';
+                else app.status = 'În așteptare';
+                saveStoredData(data);
+                renderAdminPanel();
+            }
+        }
+
+        function deleteAppointment(id) {
+            if(confirm("Sigur doriți să ștergeți această programare?")) {
+                const data = getStoredData();
+                data.appointments = data.appointments.filter(x => x.id !== id);
+                saveStoredData(data);
+                renderAdminPanel();
+            }
+        }
+
+        // Regulations Save
+        function saveRegulations() {
+            const text = document.getElementById('adminRegulationsEditor').value;
+            const data = getStoredData();
+            data.regulations = text;
+            saveStoredData(data);
+            alert("Regulamentul a fost actualizat cu succes!");
+        }
+
+        function openClientView() {
+            document.getElementById('adminDashboard').classList.remove('active');
+            document.getElementById('clientView').style.display = 'block';
+            renderClientInterface();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
